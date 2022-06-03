@@ -1,0 +1,71 @@
+div.gameplace_class {
+    margin: 30px;
+    padding: 0;
+    border: 0;
+    position: relative;
+    height: 800px;
+}
+
+img {
+    border: none;
+    margin: 0px;
+    
+}
+
+#gamebox {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.gameboard {
+    background-image: url('../images/board.png');
+    background-repeat: no-repeat;
+    width: 385px; 
+    height: 325px;
+    vertical-align: middle;
+    text-align: center;
+    transform: translate(300px, 20px);
+    
+}
+
+
+.lostballs-left {
+    background-image: url('../images/left.png');
+    /**background: green;**/
+    background-repeat: no-repeat;
+    transform: rotate(-90deg) scale(1.2) translate(-170px, -55px);
+    width: 245px; 
+    height: 65px;
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lostballs-right {
+    background-image: url('../images/right.png');
+    background-repeat: no-repeat;
+    transform: rotate(-90deg) scale(1.2) translate(165px, 600px);
+    width: 245px; 
+    height: 65px;
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.abalone {
+    background-image: url('../images/name.png');
+    width: 620px; 
+    height: 116px;
+    margin-left: 200px;
+
+}
+body{
+    background-image: url('../images/background_color.png');
+    background-repeat: repeat;
+
+}
+
