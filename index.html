@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Abalone</title>
+    <link rel="stylesheet" type="text/css" href="styles/abalonestyle.css"/>
+</head>
+
+<body>
+    <form method="post" action="./" name="myform"> 
+        <div id="wrapper">
+            <div id="content">
+    
+                <span id="Timer1" style="visibility:hidden;display:none;"></span>
+                <div class="gameplace_class" id="gameplace_class">
+    
+                    <div id="gamebox">
+                        
+                        <table >
+                            <tbody>
+    
+                            <tr>
+                                <div class="abalone"></div>
+                            </tr>
+                            <tr>
+                                <td class="lostballs-left">
+                                    <img src="images/ball5.png" style=" margin: 0; transform: translate(-13px, 15px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-17px, 15px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-21px, 15px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-25px, 15px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-29px, 15px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-33px, 15px) scale(0.9)">
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="gameboard">
+                                    <script type="text/javascript">
+                                        var marbles = "";
+                                        for (j = 0; j <= 8; j++) {
+                                            for (k = 0; k <= 8; k++) {
+                                                if ((k + j >= 4) && (k + j <= 12)) {
+                                                    marbles += "<IMG style='margin:-10px 0px 0px 0px;' src='images/ball0.png' alt='Blank marble' border=0 onMouseDown='MouseDown(" + k + "," + j + ")'  onMouseOut='MouseOut(" + k + "," + j + ")'>";
+                                                }
+                                            }
+                                            marbles += "<br>";
+                                        }
+                                        document.write(marbles);
+                                    </script>
+                                </td>
+                            </tr>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <td class="lostballs-right">
+                                    <img src="images/ball5.png" style=" margin: 0; transform: translate(-12px, 22px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-17px, 22px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-22px, 22px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-26px, 22px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-30px, 22px) scale(0.9)">
+                                    <img src="images/ball5.png" style="margin: 0; transform: translate(-34px, 22px) scale(0.9)">
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                            <tbody style="position:absolute;transform: translate(390px, 10px);">
+                                <tr>
+                                    <td style="text-align:center;width:100%;">
+                                    <div id="set">
+                                        <select onchange="javascript: SetPlayer(); return false;" size="1" name="players" required style="
+                                        background: #9676ce;  
+                                        font-size:10pt;
+                                        color: white;
+                                        border: solid 3px #9676ce;">
+                                            <option value="10">одиночная игра</option>
+                                            <option value="11">игра для двоих</option>
+                                        </select>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;width:100%; vertical-align: middle;
+                                    text-align: center; ">
+                                        <input type="button"  value="Начать сначала" style="width:200px;
+                                        height:40px;
+                                        font-size:12pt;
+                                        background: #9676ce;  
+                                        color: white;
+                                        border: solid 3px #5c3d32; box-shadow: 2px 2px 0 0 #241210 " onclick="javascript: Init()">
+                                    </td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+                <script type="text/javascript" src="scripts/script.js"></script>
+            </div>
+        </div>
+    </form>
+    </body>
+    </html>
